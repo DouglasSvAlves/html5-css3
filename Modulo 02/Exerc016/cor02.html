@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente em CSS</title>
+    <style>
+        * { /*Para fazer configuração global, usa a tag "*" */
+            height: 100%;
+        }
+        body { /*Para fazer gradiente precisa ser o background-image*/
+            background-image: linear-gradient(to right, #4A64D5 5%,#8438AC,#C52E8C,#F87928, #FED272 98%);
+            background-attachment: fixed; /*Para quando rolar o site, ele não fique saindo o gradient*/
+            /*Exemplo 2
+            background-image: radial-gradient(circle, #4A64D5,#8438AC,#C52E8C,#F87928, #FED272);
+            background-attachment: fixed;
+            */
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando Gradiente</h1> 
+</body>
+</html>

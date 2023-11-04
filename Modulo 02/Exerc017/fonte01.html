@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+</head>
+<style>
+    body { 
+        font-family: Arial, Helvetica, sans-serif; /*Safe combination. Ai são 3 fontes que se a primeira não for, puxa a 2 e assim em diante. Obs: Sempre termine com um nome generico: Sans-serif, serif, monoespace e etc*/
+        font-size: 1em; /*O padrão dos navegadores é 16px. Geralmente 16px = 1em */
+        /*
+        Medidas Absolutas
+        cm, mm, in(polegada), px, pt, pc (pt e pc - Não são recomendadas para as telas, são mais para impressão) (!!! IMPORTANTE O professor recomenda usar o "em")
+
+        Medidas Relativas
+        em, ex, rem, vw, vh, % (A Recomendação da W3C para fontes, é utilizar o "px" e "em")
+        */
+        font-weight: normal; /*Também pode se usar por numeros de 100 em 100 (100-900), mas não são todas as fontes que aceita essa forma*/
+        /*lighter, normal, bold, bolder*/
+        font-style: italic;
+        text-decoration: underline; /*Sublinhado*/
+    }
+
+    h1 {
+        /* Shorthand font (Uma mãozinha) 
+        Precisa seguir uma ordem:
+        font-style -> font-weight -> font-size -> font-family
+        */
+        font: italic bolder 3em sans-serif;
+    }
+</style>
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta a labore corporis porro libero soluta ipsum nesciunt odio atque incidunt ex inventore perspiciatis sunt, culpa vel illum error nulla excepturi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fuga illum nam velit molestias ea repellendus id ullam mollitia sed fugiat voluptatum quo iure laborum dolorem quasi, dicta corrupti! Nostrum! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit saepe eius minus aspernatur reprehenderit, odio tempore. Optio nostrum eos aliquid. Dicta impedit facere vero, architecto tempore sunt libero itaque debitis?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae tenetur maiores illum, ipsa vero facilis molestias nihil, id recusandae nemo nostrum praesentium dignissimos debitis labore exercitationem modi aperiam laudantium. Deleniti?</p>
+    <h2>Subtitulo do exercício</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum debitis, vero quis alias doloribus, asperiores inventore, perferendis nobis nisi nihil quisquam harum laboriosam sapiente commodi aspernatur cum animi? Incidunt, consequuntur?</p>   
+</body>
+</html>

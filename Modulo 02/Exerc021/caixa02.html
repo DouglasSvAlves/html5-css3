@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+            margin: 0px;
+        }
+        
+        header {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        nav {
+            background-color: rgb(109, 109, 109);
+            padding: 3px;
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.301); 
+            /*Exemplo de uma interna completa box-shadow: inset 2px 2px 7px 1px black*/
+            /*box-shadow: inset (Se você quiser uma sombra interna), Deslocamento Horizontal, Deslocamento vertical, Espalhamento, Blur(Fumaça), Spread(Espalhamento), Cor da Sombra*/
+        }
+
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px 40px; /*Se deixar dois, o 10px modifica o superior esquerdo e inferior direito. Já o 40px vai mudar o superior direito e inferior esquerdo*/
+            box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.301);   
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        article {
+            background-color: lightgray;
+            padding: 5px;
+        }
+
+        article > aside {
+            background-color: rgb(175, 175, 175);
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 5px;
+        }
+
+        footer > p {
+            margin: 0px;
+        }
+
+        div#bola {
+            height: 100px;
+            width: 100px;
+            margin-top: 10px;
+            background-color: white;
+            border-radius: 50px; /*Pode ser colocado em % também seria 50% em vez de 50px*/
+        }
+    </style>
+</head>
+<body>
+    <header> <!--Cabeçalho-->
+        <h1>Meu site</h1>
+        <nav> <!--Nav = Navegação. São seçôes de links, como Menus-->
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main> <!--Parte principal-->
+        <section id="assuntos"> <!--Uma seção-->
+            <p>Esportes Política Tecnologia</p>
+        </section>
+        <section id="noticias">
+            <article> <!--Parte de Artigos-->
+                <h2>Notícia sobre o Brasil</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae aut voluptates quas, ipsa in quia excepturi perferendis voluptate, repellendus voluptatibus hic fugiat debitis error laboriosam vero dicta possimus, reiciendis perspiciatis!</p> 
+                <aside> <!-- É para conteudo Periferico a article-->
+                    <p>Artigo escrito por José da Silva</p>
+                </aside>
+            </article>
+            <article>
+
+            </article>
+
+        </section>
+    </main>
+    <footer> <!--Roda-pé-->
+        <p>Desenvolvido pelo CursoemVideo</p>
+    </footer>
+    <div id="bola"></div>
+</body>
+</html>

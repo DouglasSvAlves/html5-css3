@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    
+    <!-- LEMBRAR DO <picture>-->
+    <picture> <!--O source media:type vem como padrão o min-width, mas o professor prefere trabalhar com o max-width. O tamanho que vai ficar o max-width é o tamanho maximo da sua maior imagem com acrescimo de 50px que é um margem para não aparecer a barra de rolagem lateral-->
+        <!--o source media:type MAX tem que ser uma logica de sequencia, sempre o menor fica em primeiro e vai aumentando. Como no exemplo abaixo começou com o P depois o M e por vim o G.-->
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexivel">
+    </picture>
+
+    <!-- INVERTIDO ELE FICA ASSIM OBS!! FICAR ATENTO AO MIN-WIDTH E MAX-WIDTH e no <picture>-->
+    <picture>
+        <source media="(min-width: 1050px)" srcset="imagens/foto-g.png" type="image/png">
+        <source media="(min-width: 750px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-p.png" alt="Imagem Flexivel">        
+    </picture>
+
+    
+    <h1>Reproduzindo Áudio</h1>
+    <p>vamos aprender a reproduzir áudios em HTML5</p>
+
+    <!-- MODELO LIMITADO
+    <audio src="midias/mini-vandals.mp3" controls autoplay></audio> --> <!-- Formatos permitidos: MP3, WAV, OGG-->
+
+    <!--Uma informação IMPORTANTE que o preload="" Se deixar em branco ou AUTO, o site só carrega por completo se carregar todo o audio e isso é ruim e pesado. Mas temos também o METADATA que carrega algumas informações (como tempo de duração) e o inicio, o que é interessante. E o NONE que não carrega nada, só quando o client dá o play-->
+    <!--IMPORTANTE Sempre colocar o CONTROLS para aparecer os controles do play, volume e etc-->
+    <!--O Loop é para fazer o audio sempre começar novamente assim que terminar (Mas NÃO é recomendado)-->
+    <audio preload="metadata" controls loop >
+        <!--O source escolhido foi o source:src. E ai tem 3 exemplos de como fazer com os 3 formatos permitidos. Sendo o primeiro (mp3) o correto e o resto é exemplo.-->
+        <!--É valido avisar que se você colocar os 3 assim com tudo correto, os audios na pasta, ele vai tentar carregar o que estiver em primeiro Mp3>Ogg>Wav, até achar um que o client consiga utilizar-->
+        <source src="midias/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midias/guanacast-33.ogg" type="audio/ogg"> 
+        <source src="midias/guanacast-33.wav" type="audio/wav"> <!--Evitar arquivos WAV, por serem muito grandes!-->
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midias/guanacast-33.mp3">Clique aqui para baixar o arquivo MP3</a></p>
+    </audio>
+</body>
+</html>

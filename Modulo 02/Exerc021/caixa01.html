@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <style>
+        h1 { /*box - level */
+            /*display: inline; Faz forçar ele virar um inline-level*/
+            background-color: lightgray;
+            height: 300px;
+            width: 300px;
+
+            border-width: 10px;      /*
+            border-style: solid;      Isso ficou só como exemplo de como fazer ele manualmente
+            border-color: black;     */ 
+
+            border: 10px solid darkslategray; /*Isso aqui é uma simplificação, para facilitar a sua vida*/
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+
+            padding: 10px; /*Aqui tbm é uma simplificação. Se você colocar só 1 ele fica para todos os 4*/
+                                /*O padding e margem tem que ser configurado no sentido horario, começando de cima e depois para direita, para baixo e para esquerda. Como se fosse um relogio*/
+
+            /*margin: auto; Se quiser deixar ele no centro sempre idependente do tamanho da tela do client. Claro que isso é para o box, se for o texto, usa o text-alight*/
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 35px;
+            margin-left: 10px;
+
+            margin: 26px auto; /*Quando você coloca só 2 numeros, ele vai conseguirar o top e bottom como 26px e o right e left como 10px. Coloquei o right e left como auto ai ele centraliza sempre a margin esquerda e direita*/
+
+            outline-width: 5px;
+            outline-style: dashed;
+            outline-color: salmon;
+
+            outline: 5px dashed salmon;
+        }
+
+        a { /* inline-level */
+
+            display: block; /*Faz forçar ele virar um box-level*/
+            border-width: 10px;
+            border-style: solid;
+            border-color: red;
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body> <!--Quarda ai: O display: block é o box-level. Já o display: inline é o inline-level-->
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Parágrafos também são exemplos de box-level, mas os <a href="#">Links são exemplos de caixas inline-level</a>. Vamos ver como tudo isso funciona</p>  
+</body>
+</html>

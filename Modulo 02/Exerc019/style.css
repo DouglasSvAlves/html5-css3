@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/*
+    Em HTML for id    = em CSS é # (só pode um elemento) (Aparentimente tem mais força de hierarquia do que o class, mas não confirmei isso e não tenho certeza)
+    Em HTML for class = em CSS é . (pode vários elementos)
+*/
+
+body {
+    background-color: rgb(213, 250, 243);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: #254D45;
+}
+
+h1#principal {
+    text-align: center;
+    background-color: #387569;
+    color: white;
+}
+
+h2 {
+    color: #4C9E8E;
+}
+
+.basico { /*O professor falor que em class, não é bom colocar a tag, por exemplo h2.basico, é melhor só colocar o class .basico. Ele faz isso pq idependente da tag, se é h2 ou p ou div e etc, todos que tiverem class="basico" vão sofrer essa alteração*/
+    color: #4C9E8E;
+}
+
+.intermediario { 
+    color: #999e4c;
+}
+
+.avancado {
+    color: #9e4c4c;
+}
+
+.destaque {
+    background-color: #999e4c79;
+}

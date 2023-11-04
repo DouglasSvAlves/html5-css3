@@ -1,0 +1,22 @@
+
+body{
+    background-color: rgb(36, 36, 36);
+    color: white;
+    font: normal 18px Arial;
+    text-align: center;
+}
+
+/*Outro exemplo que poderia funcionar é*/
+/*
+div a {  
+
+    text-decoration: none;
+    color: #ffffff
+}
+*/
+
+body p a { /* IMPORTANTE Para funcionar precisou delimitar toda a CASCATA, nesse caso o <body>, <p> e depois o <a>*/
+    text-decoration: none;
+    color: #ffffff;
+    font: normal 17px Arial;    
+}

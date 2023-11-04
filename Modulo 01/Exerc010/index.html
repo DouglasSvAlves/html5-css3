@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com links</title>
+</head>
+<body>
+    <h1>Usando links externos</h1> <!--Para colocar link externo é só usar o <a> Que é uma Ancora-->
+    <p>Você pode acessar o meu <a href="https://gustavoguanabara.github.io" target="_blank" rel="external">repositório público no GitHub</a></p><!--Para fazer com que o link abra outra aba e não saia do seu site, tem que colocar o target="_blank" e o rel="external" O rel serve para indicar para o navegador que esse link é externo (É super recomendado que tenha esses 2)-->
+
+    <p>Você também pode acessar o <a href="https://youtube.com/cursoemvideo" target="_blank" rel="external">canal gratuito no TouTube</a></p>
+
+    <p>Está é a primeira página do site. Se você quiser, pode acessar também a minha <a href="pag002.html" rel="next">Segunda página</a></p><!--O rel é next, para indicar que o link leva para uma proxima pagina-->
+
+    <p>Você também pode acessar a nossa <a href="noticias/pag003.html" rel="next" target="_self">página de notícias</a></p> <!--O target="_self" indica que vai abrir na mesma aba. Mas se deixar sem ela já vem assim por padrão. Como exemplo as outras que não coloquei e funciona assim tbm-->
+
+    <h1>Links para download</h1>
+    <ul> <!--Para colocar um arquivo para download/Baixado, é só colocar o download="" e o type="" .Para descobrir qual o type do arquivo é só procurar no site: https://www.iana.org/assignments/media-types/media-types.xhtml -->
+        <li><a href="livro/informescomercio - MercoSul.pdf" download="informescomercio - MercoSul.pdf" type="application/pdf">Baixar o livro em PDF</a></li>
+        <li><a href="livro/informescomercio - MercoSul.rar" download="informescomercio - MercoSul.rar"  type="application/zip">Livro compactado em ZIP</a></li>
+    </ul>
+</body>
+</html>
