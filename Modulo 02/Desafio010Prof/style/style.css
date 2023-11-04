@@ -17,7 +17,7 @@
     --cor4: #1a5c37;
     --cor5: #063d1e;
 
-    --fonte-padrao: Arial, verdana, helvetica, sans-serif;
+    --font-padrao: Arial, verdana, helvetica, sans-serif;
     --font-destaque: 'Bebas Neue', cursive;
     --font-android: 'Android', cursive;
 }
@@ -29,7 +29,7 @@
 
 body {
     background-color: var(--cor0);
-    font-family: var(--fonte-padrao);
+    font-family: var(--font-padrao);
 }
 
 a.externo::after { /*Faz com que depois da escrita da tag, ele coloque essa escrita, no caso o emoji*/
@@ -53,7 +53,7 @@ header > h1 {
 }
 
 header > p {
-    font-family: var(--fonte-padrao);
+    font-family: var(--font-padrao);
     font-size: 1.2em;
     color: white;
     max-width: 600px; /*Foi preciso colocar o margin auto, pq quando colocou o width ele transformou o inline em box*/
