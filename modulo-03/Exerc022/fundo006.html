@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh; /*É importante delimitar a altura 100% da view port para que a imagem fique completa no background*/
+            background-color: black;
+            background-image: url(imagens/wallpaper002.jpg);
+            background-position: center top;
+            background-repeat: no-repeat;
+            /*background-size: 100%; Faz a imagem se adaptar lateralmente com o tamanho da tela, se colocar 100% 100% ele adapta tbm a altura. Essa não é a melhor solução*/
+            /*background-size: contain; Faz a imagem ser exibida toda, com isso ela almenta e diminui o tamanho. É legal para alguns casos */
+            background-size: cover; /*Faz Ocupar 100% da VH. E é uma das melhores maneiras para deixar o site completo com a imagem de background*/
+        }
+
+        main {
+            background-color: white;
+            width: 400px;
+            padding: 10px;
+            margin: auto;
+            border: 1px solid darkblue;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Teste de imagem de fundo</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit recusandae, vel modi pariatur impedit sed dolores, repellendus excepturi dignissimos ipsam velit minima praesentium nobis accusantium. Debitis eos eum quasi possimus! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit nobis quo molestiae aperiam, quae laboriosam in hic ipsam vel atque dicta similique eligendi maiores obcaecati quod. Magnam impedit possimus tenetur! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur totam dolores cumque praesentium adipisci itaque ullam minus. Non aspernatur fugiat optio odit possimus eos nisi facilis, asperiores, nobis nesciunt error?</p>
+    </main>
+</body>
+</html>
