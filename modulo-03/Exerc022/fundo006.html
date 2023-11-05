@@ -3,22 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fundo Fixo de tela</title>
     <style>
         body {
             height: 100vh; /*É importante delimitar a altura 100% da view port para que a imagem fique completa no background*/
+            /*
             background-color: black;
             background-image: url(imagens/wallpaper002.jpg);
             background-position: center top;
             background-repeat: no-repeat;
-            /*background-size: 100%; Faz a imagem se adaptar lateralmente com o tamanho da tela, se colocar 100% 100% ele adapta tbm a altura. Essa não é a melhor solução*/
-            /*background-size: contain; Faz a imagem ser exibida toda, com isso ela almenta e diminui o tamanho. É legal para alguns casos */
-            background-size: cover; /*Faz Ocupar 100% da VH. E é uma das melhores maneiras para deixar o site completo com a imagem de background*/
+            */
+            /*
+            background-size: 100%; Faz a imagem se adaptar lateralmente com o tamanho da tela, se colocar 100% 100% ele adapta tbm a altura. Essa não é a melhor solução
+            */
+            /*
+            background-size: contain; Faz a imagem ser exibida toda, com isso ela almenta e diminui o tamanho. É legal para alguns casos 
+            */
+            /*
+            background-size: cover; /*Faz Ocupar 100% da VH. E é uma das melhores maneiras para deixar o site completo com a imagem de background
+            */
+            /*
+            background-attachment: fixed; Ele combinado com o Cover, faz a imagem ficar fixa, e só rolar o texto
+            */
+
+            /*Shorthand - background
+                color > image > position > repeat > [size] > attachment
+            */
+            background: black url('imagens/wallpaper002.jpg') center center no-repeat fixed;
+            background-size: cover; /*Na shorhand aparentemente a parte de size não funciona, ai precisa colocar a parte*/
         }
 
         main {
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 10px;
             margin: auto;
             border: 1px solid darkblue;
