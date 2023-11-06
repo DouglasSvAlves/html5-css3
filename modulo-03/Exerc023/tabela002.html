@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            background-color: #F8F9FA;
+            color: #202122;
+            position: relative;
+        }
+
+        caption {
+            font-size: 1.3em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: #e2e2e2;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        /*Ele pega todo o children e coloca o background pulando em 2 casa por isso 2n, se fosse de 3 em 3 era 3n. Pode colocar de impar e par (odd, even)*/
+        tbody tr:nth-child(2n) { /*Se quiser começando pela primeira casa, faz "2n-1" ou "odd"*/
+            background-color: #c2c2c2;
+            font-weight: bold;
+        }
+
+        thead > tr > th {
+            position: sticky; /*Faz a posição colar*/
+            top: -1px; /*Ele vai colar no 0 que é o topo do site. No caso foi utilizado o -1px por conta de uma bordinha que ficava*/
+            background-color: #EAECF0;
+        }
+
+        td.num {
+            text-align: right;
+        }
+
+        td.pos {
+            text-align: center;
+        }
+
+        thead, tfoot {
+            background-color: #EAECF0;
+        }
+
+        td#fpos {
+            background-color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--
+        ANATOMIA PARA TABELAS GRANDES
+        TABLE
+            CAPTION (A Legenda)
+            THEAD
+                TR, TD, TH
+            TBODY
+                TR, TD, TH
+            TFOOT
+                TR, TD, TH
+    -->
+    
+    <table>
+        <caption>População das Unidades Federativas</caption>
+        <thead>
+            <tr> <!--O scope="col" delimitou o scopo do titulo estado por exemplo, aos dados que vem em baixo, por isso col de coluna, pq ele pega os dados da coluna-->
+                <th scope="col" style="width: 80px;">Posição</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="pos">1</td>
+                <td>São Paulo</td>
+                <td class="num">44 411.238</td>
+            </tr>
+            <tr>
+                <td class="pos">2</td>    
+                <td>Minas Gerais</td>
+                <td class="num">20 538 718</td>
+            </tr>
+            <tr>
+                <td class="pos">3</td>
+                <td>Rio de Janeiro</td>
+                <td class="num">16 054 524</td>
+            </tr>
+            <tr>
+                <td class="pos">4</td>
+                <td>Bahia</td>
+                <td class="num">14 141 626</td>
+            </tr>
+            <tr>
+                <td class="pos">5</td>
+                <td>Rio Grande do Sul</td>
+                <td class="num">10 882 965</td>
+            </tr>
+            <tr>
+                <td class="pos">6</td>
+                <td>Paraná</td>
+                <td class="num">11 444 380</td>
+            </tr>
+            <tr>
+                <td class="pos">7</td>
+                <td>Pernambuco</td>
+                <td class="num">9 058 931</td>
+            </tr>
+            <tr>
+                <td class="pos">8</td>
+                <td>Ceará</td>
+                <td class="num">8 794 957</td>
+            </tr>
+            <tr>
+                <td class="pos">9</td>
+                <td>Pará</td>
+                <td class="num">8 121 025</td>
+            </tr>
+            <tr>
+                <td class="pos">10</td>
+                <td>Maranhão</td>
+                <td class="num">6 775 805</td>
+            </tr>
+            <tr>
+                <td class="pos">11</td>
+                <td>Santa Catarina</td>
+                <td class="num">7 610 361</td>
+            </tr>
+            <tr>
+                <td class="pos">12</td>
+                <td>Goiás</td>
+                <td class="num">7 056 495</td>
+            </tr>
+            <tr>
+                <td class="pos">13</td>
+                <td>Paraíba</td>
+                <td class="num">3 974 687</td>
+            </tr>
+            <tr>
+                <td class="pos">14</td>
+                <td>Espírito Santo</td>
+                <td class="num">3 833 712</td>
+            </tr>
+            <tr>
+                <td class="pos">15</td>
+                <td>Amazonas</td>
+                <td class="num">3 941 613</td>
+            </tr>
+            <tr>
+                <td class="pos">16</td>
+                <td>Rio Grande do Norte</td>
+                <td class="num">3 302 729</td>
+            </tr>
+            <tr>
+                <td class="pos">17</td>
+                <td>Alagoas</td>
+                <td class="num">3 127 683</td>
+            </tr>
+            <tr>
+                <td class="pos">18</td>
+                <td>Piauí</td>
+                <td class="num">3 272 199</td>
+            </tr>
+            <tr>
+                <td class="pos">19</td>
+                <td>Mato Grosso</td>
+                <td class="num">3 658 649</td>
+            </tr>
+            <tr>
+                <td class="pos">20</td>
+                <td>Distrito Federal</td>
+                <td class="num">2 817 381</td>
+            </tr>
+            <tr>
+                <td class="pos">21</td>
+                <td>Mato Grosso do Sul</td>
+                <td class="num">2 757 013</td>
+            </tr>
+            <tr>
+                <td class="pos">22</td>
+                <td>Sergipe</td>
+                <td class="num">2 209 558</td>
+            </tr>
+            <tr>
+                <td class="pos">23</td>
+                <td>Rondônia</td>
+                <td class="num">1 581 196</td>
+            </tr>
+            <tr>
+                <td class="pos">24</td>
+                <td>Tocantins</td>
+                <td class="num">1 511 460</td>
+            </tr>
+            <tr>
+                <td class="pos">25</td>
+                <td>Acre</td>
+                <td class="num">830 018</td>
+            </tr>
+            <tr>
+                <td class="pos">26</td>
+                <td>Amapá</td>
+                <td class="num">733 759</td>
+            </tr>
+            <tr>
+                <td class="pos">27</td>
+                <td>Roraima</td>
+                <td class="num">636 707</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td id="fpos"></td>
+                <th scope="row">Total de Habitantes</th> <!--Nesse caso do foot o scopo do total de habitantes e o resultado do total da população que está ao seu lado, na mesma Linha(row), por isso ficou scope="row"-->
+                <td class="num"><strong>203 062 512</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+    <!--Foi feito os lorem para demonstrar que o THead strick da tabela para no final da tabela-->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, expedita fuga similique iure, dolorem repudiandae nemo animi voluptate exercitationem sequi facere. Deserunt sequi cum quos est qui, ad quisquam necessitatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa obcaecati ab est ratione sit autem architecto qui voluptatem porro eligendi eum culpa veritatis dicta laborum, necessitatibus dolore incidunt corrupti. Saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate excepturi deleniti suscipit temporibus soluta, cum vel culpa optio. Similique, accusantium laudantium. Et nisi quae iure, officia temporibus accusantium nesciunt distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde similique quo nam assumenda facilis maxime vel. Ipsam, voluptatem eum tempore magni esse dicta mollitia sapiente atque similique itaque ipsum hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto distinctio ducimus possimus explicabo, ab, expedita accusamus dicta omnis ad dolore ipsa. Commodi esse blanditiis velit, numquam fuga soluta rem in! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni rerum fugit placeat totam voluptatem praesentium debitis necessitatibus modi nostrum deleniti, officiis voluptas quasi maxime perspiciatis sunt autem quia! Explicabo, autem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, magnam vero. Atque voluptates rem veniam distinctio, incidunt aut maiores quas magnam necessitatibus alias. Amet quam voluptates est placeat in reiciendis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, expedita fuga similique iure, dolorem repudiandae nemo animi voluptate exercitationem sequi facere. Deserunt sequi cum quos est qui, ad quisquam necessitatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa obcaecati ab est ratione sit autem architecto qui voluptatem porro eligendi eum culpa veritatis dicta laborum, necessitatibus dolore incidunt corrupti. Saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate excepturi deleniti suscipit temporibus soluta, cum vel culpa optio. Similique, accusantium laudantium. Et nisi quae iure, officia temporibus accusantium nesciunt distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde similique quo nam assumenda facilis maxime vel. Ipsam, voluptatem eum tempore magni esse dicta mollitia sapiente atque similique itaque ipsum hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto distinctio ducimus possimus explicabo, ab, expedita accusamus dicta omnis ad dolore ipsa. Commodi esse blanditiis velit, numquam fuga soluta rem in! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni rerum fugit placeat totam voluptatem praesentium debitis necessitatibus modi nostrum deleniti, officiis voluptas quasi maxime perspiciatis sunt autem quia! Explicabo, autem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, magnam vero. Atque voluptates rem veniam distinctio, incidunt aut maiores quas magnam necessitatibus alias. Amet quam voluptates est placeat in reiciendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque architecto voluptates tempora aliquid reprehenderit corrupti minus autem quae veniam! Placeat, dolore. Atque enim tenetur repudiandae molestias consequuntur itaque rem? Ab Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem temporibus voluptatibus labore accusamus atque optio alias quas, voluptatum ex mollitia nam itaque? Eius, distinctio sunt? Quos harum necessitatibus quia. Nisi.</p>
+</body>
+</html>
