@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframe</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe {
+            width: 95vw;
+            height: 400px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça uma escolha</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora asperiores aspernatur mollitia officiis cumque saepe deleniti beatae veniam eos consequatur non sed, accusamus perferendis dolore nobis soluta harum similique distinctio!</p>
+
+    <ul>
+        <li><a href="paginas-extra/pag001.html" target="frame">Primeira página</a></li> <!--Para o link ir para o iframe, precisa que o iframe tenha um name="" e é só colocar no target="" o name criado-->
+        <li><a href="paginas-extra/pag002.html" target="frame">Segunda página</a></li>
+        <li><a href="paginas-extra/pag003.html" target="frame">Terceira página</a></li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex mollitia a voluptate. Vel pariatur blanditiis ipsum, doloremque quaerat eius nostrum? Suscipit quibusdam excepturi facere a ea molestias id recusandae ab. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, neque aliquid atque sunt placeat quibusdam quos fuga, repellat iusto eveniet quisquam libero! Officia quisquam vel at. Totam perferendis assumenda magnam?</p>
+
+    <!--Cuidado que ao colocar as informações dentro do srcdoc, não pode ser "" já que é a separação do srcdoc, se for a separação de outro parametro precisa ser '' .Como exemplo a parte do src de imagem-->
+    <!--O iframe srcdoc="" é o parametro do iframe estatico-->
+    <iframe srcdoc="<h1>Escolha uma das opções acima</h1> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora asperiores aspernatur mollitia officiis cumque saepe deleniti beatae veniam eos consequatur non sed, accusamus perferendis dolore nobis soluta harum similique distinctio!</p> <img src='imagens/astronauta.png' width='250px'>" frameborder="1"  name="frame">
+        <p>Infelizmente seu navegador não é compativel com isso</p>
+    </iframe>
+</body>
+</html>
