@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Formulário</title>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iusu">Usuário: </label>
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="11" placeholder="Nome do Usuario" autocomplete="username"> <!--O parametro Required faz com que o usuario precise preencher o campo para poder enviar-->
+            <!--O parametro placeholder="" Faz com que o campo tenha um texto explicativo-->
+        </p>
+        <p>
+            <label for="isen">Senha: </label>
+            <input type="password" name="sen" id="isen" required minlength="8" placeholder="Senha c/ mínimo de 8 letras" autocomplete="current-password"> <!--O parametro min e max lenght é a quantidade de letras que é preciso para ser valido-->
+            <!--O autocomplete nos inputs ajudam a escrever automaticamente o nome so usuario a senha e muitas coisas. Só que precisa que o autocomplete="on" esteja na parte do <form>-->
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form> 
+</body>
+</html>

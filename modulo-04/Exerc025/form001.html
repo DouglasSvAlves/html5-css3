@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!--No futuro preciso aprender o metodo https para proteger o dados-->
+    <!--O parametro form tem 2 metodos, o GET e POST, por padrão ele faz o GET-->
+    <h1>Meu primeiro formulário</h1>
+    <!--O method="post" é otimo para utilizar em coisas sensiveis, como senha, numero do cartão e etc. Se o dado tiver mais de 3000 bits (3000 letras). Ou se quiser enviar arquivos. O method="get" É bom para deixar o link publico/compartilhavel, e sendo contrario as coisas dita sobre o POST-->
+    <form action="cadastro.php" autocomplete="off" method="post"> <!-- Autocomplete="off" Faz tirar as sugestões de preenchimento da barra-->
+        <p>
+            <label for="inome">Nome:</label> <!--Label faz a relação entre o texto e o bloco input criado-->
+            <input type="text" name="nome" id="inome">
+        </p>
+        <p>
+            <label for="isobrenome">Sobrenome:</label> 
+            <input type="text" name="sobrenome" id="isobrenome">
+        </p>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
