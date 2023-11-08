@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset> <!--Faz o agrupamento de campos-->
+            <legend>Dados Pessoais</legend> <!--Legenda no topo-->
+            <p>
+                <label for="iemail">E-mail: </label>
+                <input type="email" name="email" id="iemail" autocomplete="email" required>
+            </p>
+            <p>
+                <label for="itel">Telefone: </label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel" required pattern="^\(\d{2}\)[0-9]{4,5}-[0-9]{4}$" placeholder="(xx)xxxx-xxxx"><!--O RegEx começa com o ^ e termina com $-->
+                <!--A expresão [0-9]{4,5} diz que é um digito de 0 a 9 que precisa se escrito 4 ou 5 vezes, logo em seguida um - e depois a mesma coisa só que mais 4 vezes. Pode ser utilizado assim também: \d{4,5}-\d{4}. Esse \d é a mesma coisa que Digito-->
+                <!--\(\d{2}\) Essa parte é o do Codigo postal do pais-->
+            </p>
+        </fieldset>
+        <!--Estudar mais sobre RegEx (Expresão regular)
+        O input do email é melhor feito em js e outras linguagem-->
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
