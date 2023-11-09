@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/* Configurações gerais*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body { /*O background só funcionou corretamente o size e repeat se nas outras medias eu colocar background-image, em vez de background no shorthand*/
+    width: 100vw;
+    height: 100vh;
+    background-color: #233eff;
+    background-size: contain;/*Fica meelhor usar o contain em vez de cover, pq ele faz ficar a imagem completa na tela*/
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: white;
+    text-shadow: 2px 2px 0px #15238b;
+    padding: 10px;
+}
